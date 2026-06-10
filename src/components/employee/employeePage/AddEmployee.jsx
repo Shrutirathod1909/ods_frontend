@@ -682,8 +682,6 @@ useEffect(() => {
     }
   }, [editingEmployee, companies]);
 
-
-  
  const handleEditEmployee = async (employee) => {
   setStep(1);
   setValidationErrors({});
@@ -851,14 +849,14 @@ esis_date:employee.esis_date?.slice(0, 10) || "",
     // =========================
     // SEPARATION
     // =========================
-
+  separationDetails: {
   separation_type: employee.separation_type || "",
   separate_reason: employee.separate_reason || "",
   date_of_separation: employee.date_of_separation?.slice(0, 10) || "",
   notice_period: employee.notice_period || "",
   last_working_date_sp: employee.last_working_date_sp?.slice(0, 10) || "",
   handover_given_to: employee.handover_given_to || "",
-
+},
   });
 
   console.log("EDIT DATA LOADED:", employee);
